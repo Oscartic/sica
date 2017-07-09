@@ -16,8 +16,10 @@
 
 <script>
     export default {
-        mounted() {
-            console.log('Component mounted.')
+        data () {
+            return {
+                msg: 'Welcome to Your Vue.js App'
+            }
         }
     }
 </script>

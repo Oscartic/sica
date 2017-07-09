@@ -18,3 +18,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['middleware' => 'auth'], function (){
+    //Professor Routes
+    Route::resource('docente', 'admin\ProfessorController');
+    Route::patch('docente/{id}/restore', 'admin\ProfessorController@restore')->name('docente.restore');
+});
