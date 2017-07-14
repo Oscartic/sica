@@ -13,15 +13,7 @@ class RolesTableSeeder extends Seeder
     {
         \Illuminate\Support\Facades\DB::table('roles')->insert([
             [
-                'name' => 'professor',
-                'created_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s'),
-            ],
-            [
-                'name' => 'specialty_coo',
-                'created_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s'),
-            ],
-            [
-                'name' => 'academic_coo',
+                'name' => 'admin',
                 'created_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s'),
             ],
             [
@@ -29,7 +21,11 @@ class RolesTableSeeder extends Seeder
                 'created_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s'),
             ],
             [
-                'name' => 'admin',
+                'name' => 'professor',
+                'created_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s'),
+            ],
+            [
+                'name' => 'visitor',
                 'created_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s'),
             ]
         ]);

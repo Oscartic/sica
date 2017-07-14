@@ -7,3 +7,48 @@
 
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+//Estilos Menu
+.navbar-default .navbar-brand {
+  color: #efefef;
+  text-shadow: 2px 2px 5px black;
+}
+.navbar-default {
+  box-shadow: 0 4px 6px rgba(0,0,0,.3);
+}
+.navbar-default .navbar-nav > li > a {
+  color: #f7f7f7;
+}
+.navbar-default .navbar-nav > li > a:hover {
+  color: #777;
+}
+.admin-option-panel {
+  padding: 0;
+}
+.admin-option-panel li {
+  border-bottom: 1px solid #dedede;
+  display: block;
+  padding: 0;
+}
+.admin-option-panel li a {
+  display: block;
+  color: #183746;
+  font-weight: 600;
+  font-size: 1.1em;
+  letter-spacing: 0.02em;
+  padding: 6px 10px;
+}
+.admin-option-panel li a:hover {
+  background: #dedede;
+  text-decoration: none;
+}
+.admin-option-panel li span {
+  float: left!important;
+  margin-top: 8px;
+  margin-right: 5px;
+  color:#dedede;
+}
+#logo {
+  max-width: 300px;
+  padding-botton:1em;
+}

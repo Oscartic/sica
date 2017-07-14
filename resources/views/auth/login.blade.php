@@ -7,6 +7,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Login</div>
                 <div class="panel-body">
+                    <img src="../img/logo.png" alt="SISTEMA DE INFORMACIÓN PARA COORDINACIÓN ACADÉMICA" id="logo">
                     <form class="form-horizontal" method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
 

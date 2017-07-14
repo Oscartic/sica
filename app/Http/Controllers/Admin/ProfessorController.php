@@ -8,6 +8,9 @@ use App\Models\Professor;
 
 class ProfessorController extends Controller
 {
+    public function horario(){
+        return view('horario');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -45,14 +48,17 @@ class ProfessorController extends Controller
             [
                 'nombre' => 'required|max:255',
                 'rut' => 'required|unique:professors|max:10',
+                'titulo' => 'max:25',
                 'email' => 'required|unique:professors|max:60'
             ],
             [
-                'nombre.required' => 'El Nombre del Docente es requerido',
-                'rut.required' => 'El Rut del Docente es requerido',
-                'rut.unique' => 'El Rut ya esta registrado',
-                'email.required' => 'El e-Mail es requerido',
-                'email.unique' => 'El e-Mail del Docente es requerido',
+                'nombre.required' => 'El Nombre del Docente es requerido.',
+                'rut.required' => 'El Rut del Docente es requerido.',
+                'rut.unique' => 'El Rut ya esta registrado.',
+                'rut.max' => 'El Rut supera el maximo de caracteres (10).',
+                'titulo.max' => 'El titulo supera el máximo de caracteres permitidos (25).',
+                'email.required' => 'El e-Mail es requerido.',
+                'email.unique' => 'El e-Mail esta asignado a otro Docente.',
 
             ]
         );

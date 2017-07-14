@@ -19,7 +19,16 @@ class UsersTableSeeder extends Seeder
                 'remember_token' => null,
                 'created_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s'),
                 'api_token' => null,
-                'role_id' => 5,
+                'role_id' => 1,
+            ],
+            [
+                'name' => 'Usuario Director',
+                'email' => 'director@sica.cl',
+                'password' => Hash::make('director123'),
+                'remember_token' => null,
+                'created_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s'),
+                'api_token' => null,
+                'role_id' => 2,
             ],
             [
                 'name' => 'Usuario Profesor',
@@ -28,7 +37,7 @@ class UsersTableSeeder extends Seeder
                 'remember_token' => null,
                 'created_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s'),
                 'api_token' => null,
-                'role_id' => 1,
+                'role_id' => 3,
             ]
         ]);
     }

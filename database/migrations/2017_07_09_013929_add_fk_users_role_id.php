@@ -16,7 +16,7 @@ class AddFkUsersRoleId extends Migration
     {
         Schema::table('users',function($table)
         {
-            $table->integer('role_id')->unsigned()->default(1);
+            $table->integer('role_id')->unsigned()->default(4);
             $table->foreign('role_id')->references('id')->on('roles');
         });
     }

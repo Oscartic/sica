@@ -16,7 +16,7 @@ window.Vue = require('vue');
  */
 
 Vue.component('example', require('./components/Example.vue'));
-Vue.component('mad', require('./components/ModuloAnalisisDocente.vue'));
+Vue.component('mad-admin', require('./components/mad/MadAdmin.vue'));
 
 const app = new Vue({
     el: '#app'
