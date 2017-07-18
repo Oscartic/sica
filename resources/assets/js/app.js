@@ -15,8 +15,19 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+import VueResource from 'vue-resource';
+
+Vue.use(VueResource);
+
+Vue.http.interceptors.push((request, next) => {
+    request.headers.set('X-CSRF-TOKEN', $('meta[name="csrf-token"]').attr('content'));
+    next();
+});
+
+
 Vue.component('example', require('./components/Example.vue'));
-Vue.component('mad-admin', require('./components/mad/MadAdmin.vue'));
+Vue.component('course', require('./components/mad/Cours.vue'));
+Vue.component('agreements', require('./components/mad/Agreements.vue'));
 
 const app = new Vue({
     el: '#app'

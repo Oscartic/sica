@@ -23,6 +23,10 @@ Route::group(['middleware' => 'auth'], function (){
     Route::get('/inicio', 'HomeController@index')->name('inicio');
 
     Route::get('/horario', 'admin\ProfessorController@horario')->name('horario');
+
+    Route::resource('acuerdos', 'Professor\AgreementController', ['only' => [
+        'index', 'store', 'update', 'destroy'
+    ]]);
 });
 
 Route::group(['middleware' => 'director','admin'], function (){
@@ -32,6 +36,7 @@ Route::group(['middleware' => 'director','admin'], function (){
     //Subject Routes
     Route::resource('asignatura', 'admin\SubjectController');
     Route::patch('asignatura/{id}/restore', 'admin\SubjectController@restore')->name('asignatura.restore');
+
 });
 
 Route::group(['middleware' => 'admin', 'prefix' => 'administracion'], function (){
