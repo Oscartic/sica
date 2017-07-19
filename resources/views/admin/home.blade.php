@@ -43,7 +43,7 @@
                                             Tomar horarios de secciones y ver disponibilidad <br>
                                             Cruzar horarios para ver disponibilidad</p>
                                     <ul class="admin-option-panel">
-                                        <li><span class="glyphicon glyphicon-chevron-right"></span>  <a href="#">Horario Docentes</a></li>
+                                        <li><span class="glyphicon glyphicon-chevron-right"></span>  <a href="{{ url('horario') }}">Horario Docentes</a></li>
                                         <li><span class="glyphicon glyphicon-chevron-right"></span>  <a href="#">Bloques</a></li>
                                     </ul>
                                 </div>

@@ -28,6 +28,9 @@ Vue.http.interceptors.push((request, next) => {
 Vue.component('example', require('./components/Example.vue'));
 Vue.component('course', require('./components/mad/Cours.vue'));
 Vue.component('agreements', require('./components/mad/Agreements.vue'));
+Vue.component('tasks', require('./components/mad/Task.vue'));
+Vue.component('schedule', require('./components/mah/Schedule.vue'));
+Vue.component('block', require('./components/mah/Block.vue'));
 
 const app = new Vue({
     el: '#app'

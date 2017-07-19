@@ -89,9 +89,8 @@
             },
             eliminarAcuerdo(id){
                 API.resource(this).delete({id: id}).then(response => {
-                    this. fetchAcuerdos();
+                    this.fetchAcuerdos();
                 })
-                //this.acuerdos.splice(indice,1);
             },
             retornarId(){
                 return this.id_profe

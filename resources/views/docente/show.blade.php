@@ -27,7 +27,7 @@
                     </div>
                     <div class="panel-body">
                         <div class="col-md-6">
-                            componente tareas
+                            <tasks id_profe="{{$professor->id}}"></tasks>
                         </div>
                         <div class="col-md-6">
                             <agreements id_profe="{{ $professor->id }}"></agreements>

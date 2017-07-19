@@ -27,6 +27,10 @@ Route::group(['middleware' => 'auth'], function (){
     Route::resource('acuerdos', 'Professor\AgreementController', ['only' => [
         'index', 'store', 'update', 'destroy'
     ]]);
+
+    Route::resource('tareas', 'Professor\TaskController', ['only' => [
+        'index', 'store', 'update', 'destroy'
+    ]]);
 });
 
 Route::group(['middleware' => 'director','admin'], function (){
